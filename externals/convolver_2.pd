@@ -1,0 +1,51 @@
+#N canvas 2308 687 1180 657 12;
+#X declare -path ../simulation;
+#X obj 405 90 loadbang;
+#X obj 657 541 outlet~;
+#X obj 1004 536 outlet~;
+#X obj 196 135 tgl 20 0 empty empty empty 17 7 0 10 #ffc7c6 #000000
+#000000 0 1;
+#X obj 405 115 f 0;
+#X obj 517 336 * -1;
+#X msg 517 360 ref rot \$1;
+#X text 106 135 source mute;
+#X obj 245 135 tgl 20 0 empty empty empty 17 7 0 10 #ffc7c6 #000000
+#000000 0 1;
+#X msg 196 212 src 1 mute \$1;
+#X msg 245 235 src 2 mute \$1;
+#X obj 517 279 change;
+#X obj 657 379 r~ src1;
+#X obj 773 380 r~ src2;
+#X obj 542 311 r polarity-azim;
+#X text 518 221 ssr_brs~ handles horizontal orientations only;
+#X obj 517 254 r src\$1-yaw;
+#X obj 14 19 declare -path ../simulation;
+#X obj 275 443 ssr_brs~ \$2 ../simulation/brirs/S1_R\$1_stat.wav ../simulation/brirs/S2_R\$1_stat.wav
+;
+#X obj 658 443 ssr_brs~ \$2 ../simulation/brirs/S1_R\$1_dyn.wav ../simulation/brirs/S2_R\$1_dyn.wav
+, f 50;
+#X obj 603 256 inlet;
+#X connect 0 0 4 0;
+#X connect 3 0 9 0;
+#X connect 4 0 3 0;
+#X connect 4 0 8 0;
+#X connect 5 0 6 0;
+#X connect 6 0 19 0;
+#X connect 8 0 10 0;
+#X connect 9 0 18 0;
+#X connect 9 0 19 0;
+#X connect 10 0 18 0;
+#X connect 10 0 19 0;
+#X connect 11 0 5 0;
+#X connect 12 0 18 0;
+#X connect 12 0 19 0;
+#X connect 13 0 18 1;
+#X connect 13 0 19 1;
+#X connect 14 0 5 1;
+#X connect 16 0 11 0;
+#X connect 18 0 1 0;
+#X connect 18 1 2 0;
+#X connect 19 0 1 0;
+#X connect 19 1 2 0;
+#X connect 20 0 11 0;
+#X coords 0 -1 1 1 300 65 1 100 100;
