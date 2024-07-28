@@ -1,2 +1,2 @@
 # pdBinSim
-Dynamic Binaural Simulation Applications in Pure Data
+Pure Data Applications for Dynamic Binaural Simulation 
