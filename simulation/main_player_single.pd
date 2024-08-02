@@ -1,12 +1,12 @@
-#N canvas 3429 -559 331 701 12;
+#N canvas 3353 -975 333 715 12;
 #X declare -path ../externals;
 #X declare -path ../externals/ssr;
 #X obj 10 677 dac~ 1 2, f 42;
 #X obj 11 11 declare -path ../externals;
 #X obj 11 34 declare -path ../externals/ssr;
 #X obj 10 257 osc_receiver 1;
+#X obj 10 59 tracking_inversion;
 #X obj 10 122 file_loader 1;
 #X obj 11 439 binaural_player 1;
-#X obj 10 59 tracking_inversion;
-#X connect 5 0 0 0;
-#X connect 5 1 0 1;
+#X connect 6 0 0 0;
+#X connect 6 1 0 1;
