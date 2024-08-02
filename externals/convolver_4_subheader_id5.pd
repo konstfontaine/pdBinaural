@@ -1,0 +1,17 @@
+#N canvas 1460 108 446 179 12;
+#X declare -path ../externals/ssr;
+#X obj 91 46 adc~ 1 2 3 4, f 32;
+#X obj 19 144 dac~ 1 2, f 42;
+#X obj 352 46 loadbang;
+#X obj 352 75 f 1;
+#X msg 352 102 \; pd dsp \$1;
+#X obj 17 15 declare -path ../externals/ssr;
+#X obj 19 75 convolver_4_sub 5 4;
+#X connect 0 0 6 1;
+#X connect 0 1 6 2;
+#X connect 0 2 6 3;
+#X connect 0 3 6 4;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 6 0 1 0;
+#X connect 6 1 1 1;
