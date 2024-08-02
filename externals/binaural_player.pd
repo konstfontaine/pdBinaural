@@ -1,4 +1,4 @@
-#N canvas 2876 -874 1916 988 12;
+#N canvas 89 68 1593 834 12;
 #X obj 1142 557 hsl 162 19 0 1 0 0 empty empty empty -2 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 1139 531 line, f 18;
 #X obj 1139 396 tgl 19 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
@@ -38,8 +38,8 @@
 #X floatatom 219 186 12 0 0 0 - - - 0;
 #X obj 219 210 tgl 20 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 222 241 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #ffe3c6 #000000 #000000 0 1;
-#X obj 25 196 loadbang;
-#X obj 25 221 f 0;
+#X obj 435 93 loadbang;
+#X obj 435 118 f 0;
 #X text 107 157 sart | stop;
 #X obj 253 158 bng 20 250 50 0 empty empty empty 17 7 0 10 #ffc7c6 #000000 #000000;
 #X text 108 183 start sample;
@@ -99,8 +99,8 @@
 #X obj 1464 56 r src\$1-pitch;
 #X obj 1535 164 r angular-resolution-pitch-\$1;
 #X obj 1210 168 r angular-resolution-yaw-\$1;
-#X obj 1464 342 pack f f, f 10;
-#X obj 1464 367 s \$0-currentAngle-p\$1;
+#X obj 1464 354 pack f f, f 10;
+#X obj 1464 379 s \$0-currentAngle-p\$1;
 #X obj 1742 1280 unpack f f;
 #X obj 1724 1328 makefilename r\$1-left-array-%d-%%d;
 #X obj 1724 1304 f;
@@ -133,6 +133,14 @@
 #X obj 1433 1543 makefilename r\$1-right-array-%d-%%d;
 #X obj 1433 1659 s buffer1-right-p\$1;
 #X obj 1433 1443 s buffer1-left-p\$1;
+#X obj 1531 319 spigot;
+#X obj 362 302 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
+#X text 276 300 allow pitch;
+#X obj 362 341 s \$0-allow-pitch;
+#X obj 1588 256 r \$0-allow-pitch;
+#X obj 1464 319 spigot;
+#X obj 1588 280 t b f;
+#X obj 1588 319 f 0;
 #X connect 0 0 17 0;
 #X connect 0 0 21 1;
 #X connect 0 0 22 1;
@@ -190,6 +198,7 @@
 #X connect 38 0 71 0;
 #X connect 39 0 40 0;
 #X connect 40 0 38 0;
+#X connect 40 0 135 0;
 #X connect 42 0 83 0;
 #X connect 46 0 67 0;
 #X connect 48 0 33 0;
@@ -229,10 +238,9 @@
 #X connect 88 0 37 0;
 #X connect 89 0 38 0;
 #X connect 90 0 46 0;
-#X connect 91 0 100 0;
 #X connect 91 0 49 0;
-#X connect 91 0 2 0;
-#X connect 91 1 100 1;
+#X connect 91 0 139 0;
+#X connect 91 1 134 0;
 #X connect 92 0 93 0;
 #X connect 92 1 95 0;
 #X connect 93 0 91 0;
@@ -283,4 +291,13 @@
 #X connect 129 0 128 0;
 #X connect 130 0 132 0;
 #X connect 131 0 127 0;
+#X connect 134 0 100 1;
+#X connect 135 0 137 0;
+#X connect 138 0 139 1;
+#X connect 138 0 140 0;
+#X connect 139 0 100 0;
+#X connect 139 0 2 0;
+#X connect 140 0 141 0;
+#X connect 140 1 134 1;
+#X connect 141 0 100 1;
 #X coords 0 -1 1 1 300 230 1 100 100;
