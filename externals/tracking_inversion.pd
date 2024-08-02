@@ -1,0 +1,15 @@
+#N canvas 523 524 493 389 12;
+#X obj 192 138 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
+#X text 187 113 yaw;
+#X obj 251 138 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
+#X text 238 113 pitch;
+#X obj 304 138 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
+#X text 294 113 roll;
+#X obj 192 169 s global-polarity-yaw;
+#X obj 251 193 s global-polarity-pitch;
+#X obj 304 218 s global-polarity-roll;
+#X text 101 133 invert;
+#X connect 0 0 6 0;
+#X connect 2 0 7 0;
+#X connect 4 0 8 0;
+#X coords 0 -1 1 1 230 60 2 100 100;

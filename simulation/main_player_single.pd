@@ -1,37 +1,12 @@
-#N canvas 204 199 323 655 12;
+#N canvas 3429 -559 331 701 12;
 #X declare -path ../externals;
 #X declare -path ../externals/ssr;
-#X obj 10 624 dac~ 1 2, f 42;
-#N canvas 3974 466 1260 540 tracking-inversion 0;
-#X obj 192 138 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 192 166 expr if ($f1 == 1 \, $f1 \, -1), f 18;
-#X text 107 78 set to 1 if azimuth is mirrored;
-#X obj 192 207 s polarity-azim;
-#X text 187 113 yaw;
-#X obj 251 138 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X text 238 113 pitch;
-#X obj 304 138 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X text 294 113 roll;
-#X text 101 133 inverse;
-#X obj 251 238 expr if ($f1 == 1 \, $f1 \, -1), f 18;
-#X obj 251 279 s polarity-pitch;
-#X obj 304 314 expr if ($f1 == 1 \, $f1 \, -1), f 18;
-#X obj 304 355 s polarity-roll;
-#X connect 0 0 1 0;
-#X connect 1 0 3 0;
-#X connect 5 0 10 0;
-#X connect 7 0 12 0;
-#X connect 10 0 11 0;
-#X connect 12 0 13 0;
-#X coords 0 -1 1 1 230 60 2 100 100;
-#X restore 11 58 pd tracking-inversion;
+#X obj 10 677 dac~ 1 2, f 42;
 #X obj 11 11 declare -path ../externals;
 #X obj 11 34 declare -path ../externals/ssr;
 #X obj 10 257 osc_receiver 1;
 #X obj 10 122 file_loader 1;
-#X obj 11 386 binaural_player 1;
-#X connect 6 0 0 0;
-#X connect 6 1 0 1;
+#X obj 11 439 binaural_player 1;
+#X obj 10 59 tracking_inversion;
+#X connect 5 0 0 0;
+#X connect 5 1 0 1;
