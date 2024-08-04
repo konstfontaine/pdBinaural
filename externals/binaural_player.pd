@@ -1,4 +1,4 @@
-#N canvas 3280 -840 1802 1127 12;
+#N canvas 258 115 1802 1041 12;
 #X obj 1142 557 hsl 162 19 0 1 0 0 empty empty empty -2 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 1139 531 line, f 18;
 #X obj 1139 396 tgl 19 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
@@ -58,7 +58,7 @@
 #X obj 387 807 *~;
 #X obj 547 806 *~;
 #X text 108 300 osc receive;
-#X obj 1139 175 change;
+#X obj 1139 194 change;
 #X obj 19 18 array define \$0-default1;
 #X obj 388 571 tabplay~ \$0-default1;
 #X obj 546 571 tabplay~ \$0-default1;
@@ -106,6 +106,7 @@
 #X obj 219 58 r volume-binPlayer;
 #X obj 219 78 r blend-binPlayer;
 #X obj 1210 258 r angular-resolution-\$1;
+#X obj 1227 150 inlet;
 #X connect 0 0 17 0;
 #X connect 0 0 21 1;
 #X connect 0 0 22 1;
@@ -215,4 +216,5 @@
 #X connect 104 0 44 0;
 #X connect 105 0 52 0;
 #X connect 106 0 38 1;
+#X connect 107 0 59 0;
 #X coords 0 -1 1 1 300 230 1 100 100;
