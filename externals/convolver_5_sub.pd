@@ -1,4 +1,4 @@
-#N canvas 54 255 1390 715 12;
+#N canvas 56 162 1390 715 12;
 #X obj 479 91 loadbang;
 #X obj 658 541 outlet~;
 #X obj 998 536 outlet~;
@@ -18,12 +18,12 @@
 #X obj 517 250 r src\$1-yaw;
 #X obj 609 250 inlet;
 #X obj 657 379 inlet~;
-#X obj 772 380 inlet~;
-#X obj 885 379 inlet~;
-#X obj 999 380 inlet~;
+#X obj 744 380 inlet~;
+#X obj 829 379 inlet~;
+#X obj 914 380 inlet~;
 #X obj 275 443 ssr_brs~ \$2 ../simulation/brirs/S1_R\$1_stat.wav ../simulation/brirs/S2_R\$1_stat.wav ../simulation/brirs/S3_R\$1_stat.wav ../simulation/brirs/S4_R\$1_stat.wav ../simulation/brirs/S5_R\$1_stat.wav;
 #X obj 658 443 ssr_brs~ \$2 ../simulation/brirs/S1_R\$1_dyn.wav ../simulation/brirs/S2_R\$1_dyn.wav ../simulation/brirs/S3_R\$1_dyn.wav ../simulation/brirs/S4_R\$1_dyn.wav ../simulation/brirs/S5_R\$1_dyn.wav, f 49;
-#X obj 1080 380 inlet~;
+#X obj 998 380 inlet~;
 #X obj 397 135 tgl 20 0 empty empty empty 17 7 0 10 #ffc7c6 #000000 #000000 0 1;
 #X msg 397 304 src 5 mute \$1;
 #X connect 0 0 4 0;
@@ -60,5 +60,7 @@
 #X connect 22 1 2 0;
 #X connect 23 0 1 0;
 #X connect 23 1 2 0;
+#X connect 24 0 23 4;
+#X connect 24 0 22 4;
 #X connect 25 0 26 0;
 #X coords 0 -1 1 1 330 65 1 100 100;

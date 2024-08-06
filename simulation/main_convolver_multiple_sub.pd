@@ -63,6 +63,7 @@
 #X obj 1302 833 r~ src5;
 #X obj 1432 853 pd~ -ninsig 5 -noutsig 2 -fifo 2;
 #X obj 1654 829 r~ src5;
+#X connect 2 0 44 0;
 #X connect 3 0 10 0;
 #X connect 4 0 18 0;
 #X connect 5 0 23 0;
