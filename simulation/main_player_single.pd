@@ -1,4 +1,4 @@
-#N canvas 3353 -975 333 715 12;
+#N canvas 555 94 333 708 12;
 #X declare -path ../externals;
 #X declare -path ../externals/ssr;
 #X obj 10 677 dac~ 1 2, f 42;
